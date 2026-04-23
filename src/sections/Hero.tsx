@@ -7,6 +7,7 @@ export default function Hero() {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const hasHeroContent =
     heroConfig.videoPath ||
     heroConfig.eyebrow ||
@@ -15,6 +16,32 @@ export default function Hero() {
     heroConfig.subtitleLine1 ||
     heroConfig.subtitleLine2 ||
     heroConfig.ctaText;
+
+  // iOS Safari / Chrome Mobile: force muted via JS property before calling play().
+  // React prior to 18 didn't set the `muted` HTML attribute reliably, and some
+  // mobile browsers check the live property, not the attribute, before allowing autoplay.
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = true;
+    v.defaultMuted = true;
+    v.setAttribute('muted', '');
+    v.setAttribute('playsinline', '');
+    const tryPlay = () => {
+      const p = v.play();
+      if (p && typeof p.catch === 'function') {
+        p.catch(() => {
+          // Autoplay blocked (Low Power Mode, data saver). Video will show poster.
+          // Try once more after user interaction.
+          const resume = () => { v.play().catch(() => {}); };
+          window.addEventListener('touchstart', resume, { once: true, passive: true });
+          window.addEventListener('click', resume, { once: true });
+        });
+      }
+    };
+    if (v.readyState >= 2) tryPlay();
+    else v.addEventListener('loadeddata', tryPlay, { once: true });
+  }, []);
 
   useEffect(() => {
     if (!hasHeroContent) return;
@@ -68,13 +95,32 @@ export default function Hero() {
         paddingTop: 'clamp(100px, 14vh, 180px)',
       }}
     >
+      {/* Background image fallback — always painted underneath the video.
+          If autoplay is blocked or the video fails, the poster remains visible. */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          zIndex: 0,
+          backgroundImage: 'url(/videos/hero-poster.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
+
       {/* Video Background */}
       {heroConfig.videoPath && (
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
+          preload="auto"
+          poster="/videos/hero-poster.jpg"
+          {...{ 'webkit-playsinline': 'true', 'x5-playsinline': 'true' } as Record<string, string>}
+          disablePictureInPicture
+          disableRemotePlayback
           style={{
             position: 'absolute',
             top: 0,
