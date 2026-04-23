@@ -105,3 +105,138 @@
     pointer-events: none;
   }
 }
+
+/* ==========================================================================
+   Mobile responsive layer
+   Viewport targets: iPhone 15 Pro Max 430px, tablets 768px, desktop 1024+
+   ========================================================================== */
+html { -webkit-text-size-adjust: 100%; }
+body { overflow-x: hidden; }
+* { box-sizing: border-box; }
+img { max-width: 100%; height: auto; }
+
+/* 16px input font prevents iOS zoom on focus */
+input, select, textarea { font-size: 16px; }
+
+/* Two-column layout stacks on mobile */
+.page-twocol {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+  gap: 64px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .page-twocol {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+/* Contact card: sticky on desktop, flow-inline on mobile */
+.contact-card {
+  position: sticky;
+  top: 120px;
+}
+@media (max-width: 900px) {
+  .contact-card {
+    position: static;
+    top: auto;
+  }
+}
+
+/* Page hero responsive padding */
+.page-hero {
+  padding: 160px 24px 80px;
+  min-height: 55vh;
+}
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 120px 20px 56px;
+    min-height: 42vh;
+  }
+}
+
+/* Page body section — mobile padding */
+.page-body {
+  padding: 100px 24px 120px;
+}
+@media (max-width: 768px) {
+  .page-body {
+    padding: 64px 20px 80px;
+  }
+}
+
+/* Navigation */
+@media (max-width: 900px) {
+  .nav-desktop-links {
+    display: none !important;
+  }
+}
+@media (min-width: 901px) {
+  .nav-mobile-toggle {
+    display: none !important;
+  }
+}
+
+/* Mobile menu drawer */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: #1a1209;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.mobile-menu a {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fcfaee;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-menu a:active,
+.mobile-menu a:hover {
+  color: #c4956a;
+}
+
+/* Tap targets min 44px */
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Footer columns — mobile */
+@media (max-width: 640px) {
+  footer[id="footer"] > div[style*="grid-template-columns"] {
+    gap: 32px !important;
+  }
+}
+
+/* Large display headings: tighten on small screens */
+@media (max-width: 480px) {
+  h1 { letter-spacing: -0.01em; }
+}
+
+/* Gift certificates / long-form sections — mobile padding */
+@media (max-width: 640px) {
+  .lf-section { padding: 64px 20px !important; }
+  .lf-card { padding: 32px 24px !important; }
+  .lf-band { padding: 48px 24px !important; }
+}
+

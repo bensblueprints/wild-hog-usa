@@ -58,13 +58,14 @@ export default function Hero() {
       style={{
         position: 'relative',
         width: '100%',
+        minHeight: '100svh',
         height: '100vh',
-        minHeight: '600px',
         overflow: 'hidden',
         display: 'flex',
         alignItems: 'flex-end',
         justifyContent: 'center',
-        paddingBottom: '10vh',
+        paddingBottom: 'clamp(32px, 8vh, 100px)',
+        paddingTop: 'clamp(100px, 14vh, 180px)',
       }}
     >
       {/* Video Background */}
@@ -105,8 +106,8 @@ export default function Hero() {
           position: 'relative',
           zIndex: 10,
           maxWidth: '640px',
-          width: '90%',
-          padding: '48px 40px 40px',
+          width: 'calc(100% - 32px)',
+          padding: 'clamp(32px, 5vw, 48px) clamp(24px, 4vw, 40px) clamp(28px, 4vw, 40px)',
           borderRadius: '2px',
           textAlign: 'center',
         }}
@@ -132,7 +133,7 @@ export default function Hero() {
             ref={titleRef}
             style={{
               fontFamily: '"Cormorant Garamond", Georgia, serif',
-              fontSize: 'clamp(40px, 5vw, 62px)',
+              fontSize: 'clamp(34px, 8vw, 62px)',
               fontWeight: 400,
               color: '#fcfaee',
               lineHeight: 1.1,

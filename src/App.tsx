@@ -4,8 +4,8 @@ import { useLenis } from './hooks/useLenis';
 import Navigation from './sections/Navigation';
 import Hero from './sections/Hero';
 import Manifesto from './sections/Manifesto';
-import Anatomy from './sections/Anatomy';
 import Tiers from './sections/Tiers';
+import HomeLongForm from './sections/HomeLongForm';
 import Footer from './sections/Footer';
 import ParchmentUnroll from './effects/ParchmentUnroll';
 import AboutOurHunts from './pages/AboutOurHunts';
@@ -28,8 +28,8 @@ function HomePage() {
       <main>
         <Hero />
         <Manifesto />
-        <Anatomy />
         <Tiers />
+        <HomeLongForm />
         <Footer />
       </main>
     </>

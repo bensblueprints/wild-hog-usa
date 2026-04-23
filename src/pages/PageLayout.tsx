@@ -34,12 +34,11 @@ export default function PageLayout({ title, eyebrow, heroImage, children, pageTi
       <main style={{ backgroundColor: theme.bg, color: theme.text }}>
         {/* Page Hero */}
         <section
+          className="page-hero"
           style={{
             position: 'relative',
-            minHeight: '55vh',
             display: 'flex',
             alignItems: 'flex-end',
-            padding: '160px 24px 80px',
             backgroundColor: theme.bg,
             backgroundImage: heroImage
               ? `linear-gradient(180deg, rgba(26,18,9,0.4) 0%, rgba(26,18,9,0.85) 100%), url(${heroImage})`
@@ -67,7 +66,7 @@ export default function PageLayout({ title, eyebrow, heroImage, children, pageTi
             <h1
               style={{
                 fontFamily: theme.serif,
-                fontSize: 'clamp(44px, 7vw, 92px)',
+                fontSize: 'clamp(36px, 8vw, 92px)',
                 fontWeight: 400,
                 lineHeight: 1.05,
                 letterSpacing: '-0.02em',
@@ -83,7 +82,7 @@ export default function PageLayout({ title, eyebrow, heroImage, children, pageTi
 
         {/* Page Body */}
         <section style={{ backgroundColor: theme.bgLight, color: theme.textDark }}>
-          <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '100px 24px 120px' }}>
+          <div className="page-body" style={{ maxWidth: '1100px', margin: '0 auto' }}>
             {children}
           </div>
         </section>
@@ -185,13 +184,12 @@ export function CTAButton({ href, children, variant = 'solid' }: { href: string;
 export function ContactCard() {
   return (
     <aside
+      className="contact-card"
       style={{
         backgroundColor: theme.bg,
         color: theme.text,
-        padding: '48px 40px',
+        padding: 'clamp(32px, 5vw, 48px) clamp(24px, 4vw, 40px)',
         borderRadius: '2px',
-        position: 'sticky',
-        top: '120px',
       }}
     >
       <p
@@ -248,16 +246,5 @@ export function ContactCard() {
 }
 
 export function TwoColumn({ children }: { children: ReactNode }) {
-  return (
-    <div
-      style={{
-        display: 'grid',
-        gridTemplateColumns: 'minmax(0, 2fr) minmax(260px, 1fr)',
-        gap: '64px',
-        alignItems: 'start',
-      }}
-    >
-      {children}
-    </div>
-  );
+  return <div className="page-twocol">{children}</div>;
 }
