@@ -30,6 +30,55 @@ export default function AboutOurHunts() {
           </div>
 
           <div style={{ marginTop: '80px' }}>
+            <SectionHeading eyebrow="Loaner Gear" title="What to Bring" />
+            <Prose>
+              <p>We have loaner equipment — green lights and rifles/shotguns/ammo — available for your use while hunting with us. If you'd rather travel light, let us know when you book and we'll set you up.</p>
+              <p>For hog hunting in Georgia, plan on bringing:</p>
+              <ul>
+                <li>Valid Georgia hunting license</li>
+                <li>Your rifle, shotgun, or crossbow — plus ammo (we can rent this to you if needed)</li>
+                <li>Rifle scope or night-vision/thermal optic (loaner green lights available)</li>
+                <li>Blaze orange vest or hat (required during firearms deer season)</li>
+                <li>Warm layered clothing — Middle Georgia swamps get cold at night</li>
+                <li>Waterproof boots — you <em>will</em> be in wet ground</li>
+                <li>Insect repellent (Thermacell recommended)</li>
+                <li>Headlamp or flashlight with red/green lens</li>
+                <li>Binoculars</li>
+                <li>Daypack with water and snacks</li>
+                <li>Cooler for your harvested meat (ice provided on 3-day packages)</li>
+                <li>Toiletries and a change of clothes for lodge stays</li>
+              </ul>
+              <p>This list is a starting point, not complete. Call us with any questions — we're always happy to give advice.</p>
+            </Prose>
+          </div>
+
+          <div style={{ marginTop: '80px' }}>
+            <SectionHeading eyebrow="After the Shot" title="What Happens if I Get a Hog or Deer?" />
+            <Prose>
+              <p>Your guide will help you recover the animal and get it back to camp. On our 3-Day "ALL IN" Package, all animal cleaning is included — we skin it, quarter it, and get it on ice for your coolers. On our Skinny Package and one-day hunts, you can clean your own animal or we'll do it for you for $75 per animal.</p>
+              <p>We have a dedicated skinning rack at camp, and ice is always available. If you'd like your hog processed further (sausage, hams, etc.), we can refer you to a local processor — turnaround is usually 1–2 weeks and they can ship directly to you.</p>
+              <p>Hog Wild USA does not mount or euro-mount heads on site, but we're happy to recommend taxidermists in the area for trophy Russian boar and whitetail deer.</p>
+            </Prose>
+          </div>
+
+          <div style={{ marginTop: '80px' }}>
+            <SectionHeading eyebrow="Packages" title="How Much Does It Cost?" />
+            <Prose>
+              <p>Our hunts start at <strong>$325.00 per person, per day</strong>. Here's the quick rundown — see the <a href="/book-a-hunt" style={{ color: theme.accent, fontWeight: 600 }}>Book a Hunt</a> page for full details.</p>
+              <ul>
+                <li><strong>$325</strong> — One-day hunt, hogs only (no lodging)</li>
+                <li><strong>$375</strong> — One-day deer/hog combo hunt (no lodging)</li>
+                <li><strong>$525</strong> — One-day hunt with meals &amp; lodging</li>
+                <li><strong>$550</strong> — One-day guaranteed meat hog (100% guaranteed hog up to 150 lb)</li>
+                <li><strong>$650</strong> — One-day guaranteed trophy hog (100% guaranteed hog 200 lb+)</li>
+                <li><strong>$1,295</strong> — 3-Day "Skinny" Package (lodging, no meals)</li>
+                <li><strong>$1,495</strong> — 3-Day "ALL IN" Package (most popular — lodging, meals, cleaning, gratuities)</li>
+              </ul>
+              <p>A 50% deposit secures your hunt dates. 2026 Corporate and bachelor-party rates available — call for a custom quote.</p>
+            </Prose>
+          </div>
+
+          <div style={{ marginTop: '80px' }}>
             <SectionHeading eyebrow="Hunting Club" title="Only 1 Opening Left — 2026 Season" />
             <Prose>
               <p>Hunting Club Opportunities for the 2026 Season. Only 1 Opening Left. Our lands are in Twiggs County, GA about 15 minutes east of Macon. Several of our farms have irrigated crops, multiple food plots, lodging, a skinning rack, and all amenities. Water and power are available at our farms.</p>

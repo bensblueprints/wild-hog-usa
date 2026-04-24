@@ -7,6 +7,7 @@ import Manifesto from './sections/Manifesto';
 import Tiers from './sections/Tiers';
 import HomeLongForm from './sections/HomeLongForm';
 import Footer from './sections/Footer';
+import BookingCTA from './sections/BookingCTA';
 import ParchmentUnroll from './effects/ParchmentUnroll';
 import AboutOurHunts from './pages/AboutOurHunts';
 import WildBoarHunting from './pages/WildBoarHunting';
@@ -17,6 +18,7 @@ import Testimonials from './pages/Testimonials';
 import ContactUs from './pages/ContactUs';
 import DailyHuntReport from './pages/DailyHuntReport';
 import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 import ProductDetail from './pages/ProductDetail';
 import { siteConfig } from './config';
 
@@ -30,6 +32,7 @@ function HomePage() {
         <Manifesto />
         <Tiers />
         <HomeLongForm />
+        <BookingCTA />
         <Footer />
       </main>
     </>
@@ -72,6 +75,7 @@ function App() {
       <Route path="/contact-us" element={<ContactUs />} />
       <Route path="/daily-hunt-report" element={<DailyHuntReport />} />
       <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:slug" element={<BlogPost />} />
       <Route path="/products/:slug" element={<ProductDetail />} />
       <Route path="*" element={<HomePage />} />
     </Routes>

@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import type { ReactNode } from 'react';
 import Navigation from '../sections/Navigation';
 import Footer from '../sections/Footer';
+import BookingCTA from '../sections/BookingCTA';
 import { theme } from './theme';
 
 interface PageLayoutProps {
@@ -86,6 +87,9 @@ export default function PageLayout({ title, eyebrow, heroImage, children, pageTi
             {children}
           </div>
         </section>
+
+        {/* Repeating booking CTA (on every page before footer, per source) */}
+        <BookingCTA />
       </main>
       <Footer />
     </>

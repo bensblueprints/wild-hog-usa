@@ -82,6 +82,30 @@ const ENTRIES = [
       'Last night was a great night to be in the woods. 5 guys in camp right now from North Carolina — they\'ve harvested 7 hogs already. Still have open dates before the weather gets too hot. Currently monitoring over 20 trail cameras on our bait stations.',
     ],
   },
+  {
+    date: 'October 27, 2021',
+    title: 'Pre-Rut Activity — 6 Deer & 9 Hogs This Week',
+    body: [
+      'This week has seen lots of deer movement with some pre-rut activity. Our hunters have taken several small bucks and several does this week in camp as the deer activity has ramped up. The hog hunting has been on fire as well — during the last week we ended up with 6 deer and 9 hogs. A lot of hunting from before daylight to the wee hours of the morning.',
+      'As cooler weather comes in this week, the rut activity should pick up. A grunt call or rattling antlers will be good tools to have in your daypack for the next few weeks. Traditionally here in Twiggs County, GA, our rut begins to peak around November 4 until about Thanksgiving. You still have time to book a hunt for the month of November.',
+    ],
+  },
+  {
+    date: 'September 27, 2021',
+    title: 'Sounder Hitting the Bait Piles — Fall Bookings Opening',
+    body: [
+      'There were no hunters this past weekend, so the wild hogs caught a little break. Our next group comes in this Friday and it looks like it will be a great hunt. Lots of activity showing up on the Tactacam Reveal Cell Cams. The weather here in Middle Georgia has turned off cooler this week and the activity has been off the charts.',
+      'We are starting to book up our fall hunting trips — if you\'re thinking about coming to Georgia on a wild hog hunt this hunting season, get your group together, give us a call, and let\'s get you on the schedule. We offer some of the South\'s best wild boar hunting adventures.',
+    ],
+  },
+  {
+    date: 'September 22, 2021',
+    title: 'ATN X-Sight 4K Night Hunt with Don & His Sons',
+    body: [
+      'A couple of photos from this past weekend\'s hunt with Don and his sons. They used ATN X-Sight 4Ks mounted on their 7.62x39mm AR15-style rifles to kill multiple hogs. Nighttime hunting is extremely exciting at Hog Wild USA — the biggest Russian boars tend to come out to play after dark.',
+      'Check out our blog post for more information on weapon-mounted nighttime rifle scopes.',
+    ],
+  },
 ];
 
 export default function DailyHuntReport() {
