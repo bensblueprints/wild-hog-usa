@@ -185,7 +185,7 @@ export const tiersConfig: TiersConfig = {
       price: "1,495",
       frequency: "all-inclusive",
       journeys: "EXTENDED STAY",
-      image: "images/tier-03.jpg",
+      image: "images/7_Wild_Hog_Hunts_Trophy_Quest_Farms.png",
       description: "Our complete hunting getaway. Arrive, hunt, eat, sleep, repeat. This package includes 2.5 days of hunting, 3 nights in our new lodge, all meals, beverages, snacks, tips, skinning, cleaning fees, and ice for your game. Three thrilling night hunts included.",
       amenities: [
         "3 nights in our new lodge",

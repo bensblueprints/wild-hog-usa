@@ -89,7 +89,7 @@ export default function ContactUs() {
           <div style={{ aspectRatio: '1 / 1', marginTop: '24px', overflow: 'hidden', backgroundColor: theme.bgLightAlt }}>
             <iframe
               title="Hog Wild USA location"
-              src="https://www.google.com/maps?q=2481+Old+Marion+Rd,+Dry+Branch,+GA+31020&output=embed"
+              src="https://maps.google.com/maps?cid=4128140218840872818&hl=en&output=embed"
               loading="lazy"
               style={{ border: 0, width: '100%', height: '100%' }}
               allowFullScreen

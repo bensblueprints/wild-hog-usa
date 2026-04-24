@@ -35,11 +35,19 @@
   }
 
   body {
-    @apply bg-parchment text-charcoal;
+    @apply text-charcoal;
     font-family: 'Inter', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-wrap: break-word;
+    background-color: #1a1209;
+    background-image:
+      linear-gradient(180deg, rgba(26, 18, 9, 0.55) 0%, rgba(26, 18, 9, 0.85) 100%),
+      url('/images/misty-foggy-woods.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
   }
 
   h1, h2, h3, h4, h5, h6 {

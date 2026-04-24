@@ -8,7 +8,7 @@ export default function AboutOurHunts() {
       pageDescription="Learn what to expect on a guided wild hog hunt in Middle Georgia. Night hunting with green lights, 2-man stands, expert guides, QDM farms along the Ocmulgee River."
       eyebrow="About Our Hunts"
       title="Hog Hunt GA — The Experience"
-      heroImage="/images/3_Trophy_Hunting_Georgia_Swamplands.png"
+      heroImage="/images/about-hunts-hero.webp"
     >
       <TwoColumn>
         <div>
